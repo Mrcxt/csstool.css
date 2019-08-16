@@ -1,0 +1,102 @@
+/*
+ * @Description: margin
+ * @Author: @虾哔哔
+ * @Date: 2019-08-15 18:14:28
+ * @LastEditTime: 2019-08-15 18:14:28
+ */
+@pixel: 1px;
+@time :50; //循环次数
+
+
+/* margin */
+
+.m(@n) when (@n >=0) {
+    .m@{n} {
+        margin: (@n*@pixel);
+    }
+
+    //循环调用自身
+    .m((@n - 1));
+}
+
+.m(@time);
+
+
+/* margin-left,margin-right */
+
+.mx(@n) when (@n >=0) {
+    .mx@{n} {
+        margin-left: (@n*@pixel);
+        margin-right: (@n*@pixel);
+    }
+
+    .mx((@n - 1));
+}
+
+.mx(@time);
+
+
+/* margin-top,margin-bottom */
+
+.my(@n) when (@n >=0) {
+    .my@{n} {
+        margin-top: (@n*@pixel);
+        margin-bottom: (@n*@pixel);
+    }
+
+    .my((@n - 1));
+}
+
+.my(@time);
+
+
+/* margin-top */
+
+.mt(@n) when (@n >=0) {
+    .mt@{n} {
+        margin-top: (@n*@pixel);
+    }
+
+    .mt((@n - 1));
+}
+
+.mt(@time);
+
+
+/* margin-right */
+
+.mr(@n) when (@n >=0) {
+    .mr@{n} {
+        margin-right: (@n*@pixel);
+    }
+
+    .mr((@n - 1));
+}
+
+.mr(@time);
+
+
+/* margin-bottom */
+
+.mb(@n) when (@n >=0) {
+    .mb@{n} {
+        margin-bottom: (@n*@pixel);
+    }
+
+    .mb((@n - 1));
+}
+
+.mb(@time);
+
+
+/* margin-left */
+
+.ml(@n) when (@n >=0) {
+    .ml@{n} {
+        margin-left: (@n*@pixel);
+    }
+
+    .ml((@n - 1));
+}
+
+.ml(@time);
