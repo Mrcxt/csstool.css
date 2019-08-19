@@ -1,12 +1,14 @@
 {
     "name": "csstool.css",
     "version": "1.0.0",
-    "description": "",
+    "description": "css常用样式工具集",
+    "main": "./dist/css/csstool.css",
+    "style": "./dist/css/csstool.css",
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config webpack.dev.js",
         "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
     },
-    "author": "",
+    "author": "虾哔哔",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.2.2",
@@ -43,5 +45,8 @@
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
+    },
+    "dependencies": {
+        "csstool.css": "^1.0.0"
     }
 }

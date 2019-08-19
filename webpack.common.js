@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: @虾哔哔
  * @Date: 2019-08-15 17:14:49
- * @LastEditTime: 2019-08-16 09:18:22
+ * @LastEditTime: 2019-08-16 11:18:04
  */
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -33,7 +33,7 @@ module.exports = {
             template: 'src/index.html' //
         }),
         new MiniCssExtractPlugin({
-            filename: "css/[name].css",
+            filename: "css/csstool.css",
         })
     ],
     module: {
