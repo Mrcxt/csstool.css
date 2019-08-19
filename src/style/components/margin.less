@@ -4,6 +4,9 @@
  * @Date: 2019-08-15 18:14:28
  * @LastEditTime: 2019-08-15 18:14:28
  */
+
+@import './root.less';
+
 @pixel: 1px;
 @time :50; //循环次数
 
@@ -11,7 +14,7 @@
 /* margin */
 
 .m(@n) when (@n >=0) {
-    .m@{n} {
+    @{className}m@{n} {
         margin: (@n*@pixel);
     }
 
@@ -25,7 +28,7 @@
 /* margin-left,margin-right */
 
 .mx(@n) when (@n >=0) {
-    .mx@{n} {
+    @{className}mx@{n} {
         margin-left: (@n*@pixel);
         margin-right: (@n*@pixel);
     }
@@ -39,7 +42,7 @@
 /* margin-top,margin-bottom */
 
 .my(@n) when (@n >=0) {
-    .my@{n} {
+    @{className}my@{n} {
         margin-top: (@n*@pixel);
         margin-bottom: (@n*@pixel);
     }
@@ -53,7 +56,7 @@
 /* margin-top */
 
 .mt(@n) when (@n >=0) {
-    .mt@{n} {
+    @{className}mt@{n} {
         margin-top: (@n*@pixel);
     }
 
@@ -66,7 +69,7 @@
 /* margin-right */
 
 .mr(@n) when (@n >=0) {
-    .mr@{n} {
+    @{className}mr@{n} {
         margin-right: (@n*@pixel);
     }
 
@@ -79,7 +82,7 @@
 /* margin-bottom */
 
 .mb(@n) when (@n >=0) {
-    .mb@{n} {
+    @{className}mb@{n} {
         margin-bottom: (@n*@pixel);
     }
 
@@ -92,7 +95,7 @@
 /* margin-left */
 
 .ml(@n) when (@n >=0) {
-    .ml@{n} {
+    @{className}ml@{n} {
         margin-left: (@n*@pixel);
     }
 
