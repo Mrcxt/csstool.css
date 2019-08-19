@@ -1,0 +1,42 @@
+/*
+ * @Description: color
+ * @Author: @虾哔哔
+ * @Date: 2019-08-16 16:04:47
+ * @LastEditTime: 2019-08-16 16:04:55
+ */
+
+@import './root.less';
+
+@colors: primary, success, warning, danger;
+@i: length(@colors);
+
+/* color */
+
+.color(@i)when(@i>0) {
+    @name: extract(@colors, @i);
+
+    @{className}color-@{name} {
+        @color :~'--color-@{name}';
+        color: var(@color);
+    }
+
+    .color((@i - 1));
+}
+
+.color(@i);
+
+
+/* background-color */
+
+.bgcolor(@i)when(@i>0) {
+    @name: extract(@colors, @i);
+
+    @{className}bgcolor-@{name} {
+        @color :~'--color-@{name}';
+        background-color: var(@color);
+    }
+
+    .bgcolor((@i - 1));
+}
+
+.bgcolor(@i);
