@@ -1,0 +1,24 @@
+/*
+ * @Description: font
+ * @Author: @虾哔哔
+ * @Date: 2019-08-15 18:14:20
+ * @LastEditTime: 2019-08-16 15:53:43
+ */
+
+@import './root.less';
+
+/* font-size */
+
+@pixel: 1px;
+@time :30; //循环次数
+
+.fontsize(@n) when (@n >=12) {
+    @{className}fontsize@{n} {
+        font-size: (@n*@pixel);
+    }
+
+    //循环调用自身
+    .fontsize((@n - 1));
+}
+
+.fontsize(@time);
