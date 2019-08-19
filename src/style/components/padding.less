@@ -4,6 +4,9 @@
  * @Date: 2019-08-15 18:14:33
  * @LastEditTime: 2019-08-15 18:14:33
  */
+
+@import './root.less';
+
 @pixel: 1px;
 @time :50; //循环次数
 
@@ -11,7 +14,7 @@
 /* padding */
 
 .p(@n) when (@n >=0) {
-    .p@{n} {
+    @{className}p@{n} {
         padding: (@n*@pixel);
     }
 
@@ -25,7 +28,7 @@
 /* padding-left,padding-right */
 
 .px(@n) when (@n >=0) {
-    .px@{n} {
+    @{className}px@{n} {
         padding-left: (@n*@pixel);
         padding-right: (@n*@pixel);
     }
@@ -39,7 +42,7 @@
 /* padding-top,padding-bottom */
 
 .py(@n) when (@n >=0) {
-    .py@{n} {
+    @{className}py@{n} {
         padding-top: (@n*@pixel);
         padding-bottom: (@n*@pixel);
     }
@@ -53,7 +56,7 @@
 /* padding-top */
 
 .pt(@n) when (@n >=0) {
-    .pt@{n} {
+    @{className}pt@{n} {
         padding-top: (@n*@pixel);
     }
 
@@ -66,7 +69,7 @@
 /* padding-right */
 
 .pr(@n) when (@n >=0) {
-    .pr@{n} {
+    @{className}pr@{n} {
         padding-right: (@n*@pixel);
     }
 
@@ -79,7 +82,7 @@
 /* padding-bottom */
 
 .pb(@n) when (@n >=0) {
-    .pb@{n} {
+    @{className}pb@{n} {
         padding-bottom: (@n*@pixel);
     }
 
@@ -92,7 +95,7 @@
 /* padding-left */
 
 .pl(@n) when (@n >=0) {
-    .pl@{n} {
+    @{className}pl@{n} {
         padding-left: (@n*@pixel);
     }
 
